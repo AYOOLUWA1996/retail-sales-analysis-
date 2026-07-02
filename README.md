@@ -16,6 +16,35 @@ The same analysis, visualised as an interactive Power BI dashboard:
 The dashboard presents all five business questions at a glance — revenue by category, the monthly sales trend, top customers, and the key revenue-vs-margin finding: the highest-revenue category (Furniture) has the lowest profit margin. Built in Power BI Desktop from the same dataset, using table relationships and calculated measures (Total Profit, Profit Margin %) that mirror the SQL logic.
 
 ---
+## Python (pandas) Analysis
+
+The same retail analysis, reproduced in Python using pandas and matplotlib — demonstrating the full workflow from raw CSV to polished charts in a third toolset.
+
+**Skills shown:** pandas (`read_csv`, `merge`, `groupby`, filtering, calculated columns, date handling with `to_datetime`), matplotlib charting, and reproducing SQL logic in Python.
+
+The Jupyter notebook (`retail_analysis.ipynb`) contains the full code. Key outputs:
+
+### Revenue by Category
+![Revenue by Category](revenue_by_category.png)
+
+### Profit by Category
+![Profit by Category](profit_by_category.png)
+
+### Profit Margin % by Category
+![Profit Margin by Category](margin_by_category.png)
+
+The same core finding holds across all three tools: the highest-revenue category (Furniture) has the lowest profit margin, while the smallest category (Stationery) is the most margin-efficient.
+
+### Top 10 Customers
+![Top 10 Customers](top_customers.png)
+
+### Monthly Sales Trend
+![Monthly Sales Trend](monthly_trend.png)
+
+---
+
+*This analysis was completed three ways — SQL, Power BI, and Python (pandas) — to demonstrate the same business questions answered across the core analyst toolset.*
+
 
 ## The Data
 
