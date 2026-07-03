@@ -1,21 +1,10 @@
-# Retail Sales Analysis (SQL)
+# Retail Sales Analysis — SQL, Power BI & Python
 
-A SQL analysis of a retail business's sales, profit, and customer data across 2024–2025. The project answers five business questions using a normalized three-table database, with each query paired to a plain-English question and a business insight.
+A retail sales analysis answering five business questions about sales, profit, and customers across 2024–2025 — completed three ways (SQL, Power BI, and Python) to demonstrate the same insights across the core analyst toolset.
 
-**Tools:** SQLite (SQL)
-**Skills shown:** multi-table JOINs, aggregation (`SUM`, `COUNT`, `AVG`), `GROUP BY`, calculated columns, profit-margin ratios, date-based trend analysis.
+**Skills shown:** multi-table JOINs, aggregation (`SUM`, `COUNT`, `AVG`), `GROUP BY`, calculated columns, profit-margin ratios, date-based trend analysis, Power BI dashboarding, and pandas/matplotlib.
 
 ---
-
-## Power BI Dashboard
-
-The same analysis, visualised as an interactive Power BI dashboard:
-
-![Retail Sales Dashboard](dashboard.png)
-
-The dashboard presents all five business questions at a glance — revenue by category, the monthly sales trend, top customers, and the key revenue-vs-margin finding: the highest-revenue category (Furniture) has the lowest profit margin. Built in Power BI Desktop from the same dataset, using table relationships and calculated measures (Total Profit, Profit Margin %) that mirror the SQL logic.
-
-
 
 ## The Data
 
@@ -30,6 +19,8 @@ A normalized retail database of **427 orders**, **60 customers**, and **22 produ
 Tables link via `orders.cust_id → customers.cust_id` and `orders.product_id → products.product_id`.
 
 ---
+
+# Part 1 — SQL Analysis
 
 ## Question 1 — Which product category generates the most revenue?
 
@@ -148,21 +139,21 @@ Monthly sales ranged from a low of **₦1.1M (Sep 2024)** to a high of **₦4.9M
 
 ---
 
-## What this project demonstrates
+# Part 2 — Power BI Dashboard
 
-- Joining and aggregating across a normalized multi-table database
-- Distinguishing **revenue from profit from margin** — and why conflating them misleads
-- Calculating derived metrics (profit, margin) not stored in the raw data
-- Reading data honestly, including stating what the data does *not* show
+The same analysis, visualised as an interactive Power BI dashboard:
 
-*Dataset is synthetic, generated for analysis practice. Built as Portfolio Project #1.*
-## Python (pandas) Analysis
+![Retail Sales Dashboard](dashboard.png)
+
+The dashboard presents all five business questions at a glance — revenue by category, the monthly sales trend, top customers, and the key revenue-vs-margin finding: the highest-revenue category (Furniture) has the lowest profit margin. Built in Power BI Desktop from the same dataset, using table relationships and calculated measures (Total Profit, Profit Margin %) that mirror the SQL logic.
+
+---
+
+# Part 3 — Python (pandas) Analysis
 
 The same retail analysis, reproduced in Python using pandas and matplotlib — demonstrating the full workflow from raw CSV to polished charts in a third toolset.
 
-**Skills shown:** pandas (`read_csv`, `merge`, `groupby`, filtering, calculated columns, date handling with `to_datetime`), matplotlib charting, and reproducing SQL logic in Python.
-
-The Jupyter notebook (`retail_analysis.ipynb`) contains the full code. Key outputs:
+**Skills shown:** pandas (`read_csv`, `merge`, `groupby`, filtering, calculated columns, date handling with `to_datetime`), matplotlib charting, and reproducing SQL logic in Python. The Jupyter notebook (`retail_analysis.ipynb`) contains the full code.
 
 ### Revenue by Category
 ![Revenue by Category](revenue_by_category.png)
@@ -183,5 +174,12 @@ The same core finding holds across all three tools: the highest-revenue category
 
 ---
 
-*This analysis was completed three ways — SQL, Power BI, and Python (pandas) — to demonstrate the same business questions answered across the core analyst toolset.*
+## What this project demonstrates
 
+- Joining and aggregating across a normalized multi-table database
+- Distinguishing **revenue from profit from margin** — and why conflating them misleads
+- Calculating derived metrics (profit, margin) not stored in the raw data
+- Reading data honestly, including stating what the data does *not* show
+- Delivering the same analysis across **three tools** — SQL, Power BI, and Python
+
+*Dataset is synthetic, generated for analysis practice. Built as Portfolio Project #1.*
